@@ -1,0 +1,283 @@
+﻿@model IEnumerable<Products>
+
+
+@{
+    Layout = "_Layout";
+}
+
+
+
+
+<div class="sr-area-div swiper mySwiper">
+
+    <div class="sr-content swiper-wrapper">
+        @foreach (var item in ViewBag.Shops)
+        {
+            <div class="swiper-slide">
+                <div class="brands-carousel-img">
+                    <a href="../store-page.html" style="text-decoration: none;">
+                        <img class="sr-img-brand" src="../../../Main/images/brands/brnd-2.jpg" alt="">
+                        <span class="brands-store-name">@item.shopName</span>
+                    </a>
+                </div>
+            </div>
+
+        }
+    </div>
+
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+    <div class="swiper-pagination"></div>
+</div>
+<div class="vip-products-text-area">
+    <div class="vip-child-div">
+        <div class="vip-text">Mağazalar</div>
+        <div class="all-vip-btn"><button class="btn-shw-all-vip">Butun mağazalar</button></div>
+    </div>
+
+</div>
+<div class="shops-content-area">
+
+    <div class="shops-content-area-div">
+
+
+        @foreach (var item in ViewBag.Shops)
+        {
+            <a class="shops-content-att" asp-controller="Store" asp-action="storeSingle" asp-route-id="@item.Id">
+                <div class="shops-content">
+                    <div class="img-card-shop">
+                        <img src="../../Main/images/brands/brnd-2.jpg" alt="">
+                    </div>
+                    <div class="shop-name-highlight">
+                        @item.shopName <i class="fa-solid fa-gem fa-shop-premium "></i>
+                    </div>
+                    <div class="location-card">
+                        <img src="../../Main/images/asist-imgs/location-sign-svgrepo-com.svg" alt="">
+                        <span>@item.shopLocation</span>
+                    </div>
+                    <div class="about-shop-card">
+                        @item.aboutShop
+                    </div>
+                    <div class="contact-card">
+                        <img src="../../Main/images/asist-imgs/phone.png" alt="">
+                        <span>
+                            : @item.shopNumber
+                        </span>
+
+                    </div>
+
+                </div>
+            </a>
+        }
+
+
+
+    </div>
+</div>
+<div class="banner">
+    <div id="banner" class="banner-shop-page owl-carousel owl-theme">
+        <div class="banner-div">
+            <img class="banner-area" src="https://media.giphy.com/media/UkyPa531vLhlKkTXqg/giphy.gif" alt="">
+        </div>
+        <div class="banner-div">
+            <img class="banner-area" src="https://media.giphy.com/media/UkyPa531vLhlKkTXqg/giphy.gif" alt="">
+        </div>
+        <div class="banner-div">
+            <img class="banner-area" src="https://media.giphy.com/media/UkyPa531vLhlKkTXqg/giphy.gif" alt="">
+        </div>
+        <div class="banner-div">
+            <img class="banner-area" src="https://media.giphy.com/media/UkyPa531vLhlKkTXqg/giphy.gif" alt="">
+        </div>
+
+    </div>
+</div>
+
+<div class="vip-products-text-area">
+    <div class="vip-child-div">
+        <div class="vip-text">Axtarış nəticəsi</div>
+        <div class="all-vip-btn"><button class="btn-shw-all-vip">Butun son Elanlar</button></div>
+    </div>
+</div>
+
+
+<div class="praducts">
+    <a href="../../pages/productPage/productPage.html" style="text-decoration: none;">
+        <div class="container">
+
+            <div class="image">
+                <img src="../../Main/images/products/New/1.jfif" alt="">
+            </div>
+            <div class="info">
+
+                <div class="price-vip"><span>4 500 AZN</span><i class="fa-solid fa-gem" style="color: #3498db;"></i></div>
+
+                <div class="prob-weight-div">
+
+                    <div class="prob">585</div>
+                    <div class="weight">4,3gr</div><span class="sep-w-c">/</span>
+                    <div class="carat">0,35ct</div>
+
+                </div>
+                <div class="title-of-product">some text about product</div>
+
+                <div class="time">Bakı, bugün, 16:06</div>
+            </div>
+        </div>
+    </a>
+    <a href="../../pages/productPage/productPage.html" style="text-decoration: none;">
+        <div class="container">
+            <div class="image">
+                <img src="../../Main/images/products/New/n2.jpg" alt="">
+            </div>
+
+            <div class="info">
+                <div class="price-vip"><span>4 500 AZN</span><i class="fa-solid fa-gem" style="color: #3498db;"></i></div>
+                <div class="prob-weight-div">
+
+                    <div class="prob">585°</div>
+                    <div class="weight">4,3gr</div><span class="sep-w-c">/</span>
+                    <div class="carat">0,35ct</div>
+
+                </div>
+                <div class="title-of-product">some text about product</div>
+                <div class="time">Bakı, bugün, 16:06</div>
+            </div>
+        </div>
+    </a>
+    <a href="../../pages/productPage/productPage.html" style="text-decoration: none;">
+        <div class="container">
+            <div class="image">
+                <img src="../../Main/images/products/New/n3.jpg" alt="">
+            </div>
+
+            <div class="info">
+                <div class="price-vip"><span>4 500 AZN</span><i class="fa-solid fa-gem" style="color: #3498db;"></i></div>
+                <div class="prob-weight-div">
+
+                    <div class="prob">585°</div>
+                    <div class="weight">4,3gr</div><span class="sep-w-c">/</span>
+                    <div class="carat">0,35ct</div>
+
+                </div>
+                <div class="title-of-product">some text about product</div>
+                <div class="time">Bakı, bugün, 16:06</div>
+            </div>
+        </div>
+    </a>
+    <a href="../../pages/productPage/productPage.html" style="text-decoration: none;">
+        <div class="container">
+            <div class="image">
+                <img src="../../Main/images/products/New/n4.jpg" alt="">
+            </div>
+
+            <div class="info">
+                <div class="price-vip"><span>4 500 AZN</span><i class="fa-solid fa-gem" style="color: #3498db;"></i></div>
+                <div class="prob-weight-div">
+
+                    <div class="prob">585°</div>
+                    <div class="weight">4,3gr</div><span class="sep-w-c">/</span>
+                    <div class="carat">0,35ct</div>
+
+                </div>
+                <div class="title-of-product">some text about product</div>
+                <div class="time">Bakı, bugün, 16:06</div>
+            </div>
+        </div>
+    </a>
+
+    <a href="../../pages/productPage/productPage.html" style="text-decoration: none;">
+        <div class="container">
+            <div class="image">
+                <img src="../../Main/images/products/New/84856461_481448139208023_7236620010829905920_n.jpg" alt="">
+            </div>
+
+            <div class="info">
+                <div class="price-vip"><span>4 500 AZN</span><i class="fa-solid fa-gem" style="color: #3498db;"></i></div>
+                <div class="prob-weight-div">
+
+                    <div class="prob">585°</div>
+                    <div class="weight">4,3gr</div><span class="sep-w-c">/</span>
+                    <div class="carat">0,35ct</div>
+
+                </div>
+                <div class="title-of-product">some text about product</div>
+                <div class="time">Bakı, bugün, 16:06</div>
+            </div>
+        </div>
+    </a>
+    <a href="../../pages/productPage/productPage.html" style="text-decoration: none;">
+        <div class="container">
+            <div class="image">
+                <img src="../../Main/images/products/New/87371399_497630300923140_137494959845539840_n.jpg" alt="">
+            </div>
+
+            <div class="info">
+                <div class="price-vip"><span>4 500 AZN</span><i class="fa-solid fa-gem" style="color: #3498db;"></i></div>
+                <div class="prob-weight-div">
+
+                    <div class="prob">585°</div>
+                    <div class="weight">4,3gr</div><span class="sep-w-c">/</span>
+                    <div class="carat">0,35ct</div>
+
+                </div>
+                <div class="title-of-product">some text about product</div>
+                <div class="time">Bakı, bugün, 16:06</div>
+            </div>
+        </div>
+    </a>
+    <a href="../../pages/productPage/productPage.html" style="text-decoration: none;">
+        <div class="container">
+            <div class="image">
+                <img src="../../Main/images/products/New/87482642_493746097978227_4979548601530187776_n.jpg" alt="">
+            </div>
+
+            <div class="info">
+                <div class="price-vip"><span>4 500 AZN</span><i class="fa-solid fa-gem" style="color: #3498db;"></i></div>
+                <div class="prob-weight-div">
+
+                    <div class="prob">585°</div>
+                    <div class="weight">4,3gr</div><span class="sep-w-c">/</span>
+                    <div class="carat">0,35ct</div>
+
+                </div>
+                <div class="title-of-product">some text about product</div>
+                <div class="time">Bakı, bugün, 16:06</div>
+            </div>
+        </div>
+    </a>
+    <a href="../../pages/productPage/productPage.html" style="text-decoration: none;">
+        <div class="container">
+            <div class="image">
+                <img src="../../Main/images/products/New/89335440_497627840923386_597420257132412928_n.jpg" alt="">
+            </div>
+
+            <div class="info">
+                <div class="price-vip"><span>4 500 AZN</span><i class="fa-solid fa-gem" style="color: #3498db;"></i></div>
+                <div class="prob-weight-div">
+
+                    <div class="prob">585°</div>
+                    <div class="weight">4,3gr</div><span class="sep-w-c">/</span>
+                    <div class="carat">0,35ct</div>
+
+                </div>
+                <div class="title-of-product">some text about product</div>
+                <div class="time">Bakı, bugün, 16:06</div>
+            </div>
+        </div>
+    </a>
+</div>
+
+
+
+<a href="https://wa.me/qr/X2QHOXJA3CFLC1">
+
+    <!-- <div class="fixed-contact-btn">
+      <div class="img-fixed-whatsapp-main">
+        <img class="img-fixed-whatsapp" src="../Main/images/asist-imgs/whatsapp.png" alt="">
+      </div>
+      <div class="live-text-wp"><img class="red-dot-live" src="../Main/images/asist-imgs/red-dot2.png" alt=""> <span
+          class="live-chat-text">Live Chat</span></div>
+
+    </div> -->
+</a>
+<!-- Popup -->
